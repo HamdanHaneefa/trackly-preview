@@ -124,7 +124,7 @@ function SubscribeModal({ onClose, isLimitReached }: { onClose: () => void; isLi
 
         <div style={{ textAlign: "center" }}>
           <h2 style={{ fontSize: "17px", fontWeight: 700, color: "hsl(var(--foreground))", marginBottom: "8px", margin: "0 0 8px" }}>
-            {isLimitReached ? "You've used your 5 free interactions" : "This is a preview"}
+            {isLimitReached ? "You've used your 10 free interactions" : "This is a preview"}
           </h2>
           <p style={{ fontSize: "13px", color: "hsl(var(--muted-foreground))", lineHeight: 1.6, margin: 0 }}>
             {isLimitReached
