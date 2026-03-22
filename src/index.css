@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 20% 98%;
+    --foreground: 224 71% 4%;
+    --card: 0 0% 100%;
+    --card-foreground: 224 71% 4%;
+    --primary: 221 83% 53%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 224 71% 4%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 221 83% 53%;
+    --radius: 0.25rem;
+    --week-1: 221 83% 53%;
+    --week-2: 271 81% 56%;
+    --week-3: 0 84% 60%;
+    --week-4: 45 93% 47%;
+    --week-5: 142 71% 45%;
+    --week-monthly: 300 64% 49%;
+    --tracker-header-bg: 221 83% 35%;
+    --tracker-header-fg: 0 0% 100%;
+  }
+  .dark {
+    --background: 222 28% 10%;
+    --foreground: 210 20% 92%;
+    --card: 222 28% 14%;
+    --card-foreground: 210 20% 92%;
+    --primary: 221 83% 58%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 222 28% 18%;
+    --secondary-foreground: 210 20% 85%;
+    --muted: 222 28% 18%;
+    --muted-foreground: 215 16% 55%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 222 28% 22%;
+    --input: 222 28% 22%;
+    --ring: 221 83% 58%;
+    --tracker-header-bg: 221 83% 30%;
+    --tracker-header-fg: 0 0% 100%;
+  }
+}
+
+@layer base {
+  * { @apply border-border; }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-size: 14px;
+  }
+}
+
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: hsl(var(--muted)); }
+::-webkit-scrollbar-thumb { background: hsl(var(--muted-foreground) / 0.3); border-radius: 3px; }
+.tabular-nums { font-variant-numeric: tabular-nums; }
