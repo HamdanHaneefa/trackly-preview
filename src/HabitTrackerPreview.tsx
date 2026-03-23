@@ -443,7 +443,9 @@ export default function HabitTrackerPreview() {
                     return (
                       <td key={d} className="border border-border p-0 text-center"
                         style={{ backgroundColor: cellBg[mobileWeekIdx % cellBg.length] }}>
-                        <button onClick={() => toggle(habit.id, d)}
+                        <button
+                          onTouchEnd={e => { e.preventDefault(); toggle(habit.id, d); }}
+                          onClick={() => toggle(habit.id, d)}
                           className="w-full h-full flex items-center justify-center py-1.5"
                           style={{ cursor: isLimitReached ? "not-allowed" : "pointer" }}>
                           <span className="inline-flex w-4 h-4 rounded-sm items-center justify-center transition-all duration-150"
