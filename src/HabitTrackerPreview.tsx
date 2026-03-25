@@ -339,15 +339,6 @@ export default function HabitTrackerPreview() {
     <div className="min-h-screen bg-background p-2 sm:p-4" onContextMenu={e => e.preventDefault()}>
       {showModal && <SubscribeModal onClose={() => setShowModal(false)} isLimitReached={isLimitReached} />}
 
-      {/* Preview banner */}
-      <div className="flex items-center justify-center gap-2 flex-wrap text-white text-xs font-semibold rounded-lg mb-2 px-3 py-1.5" style={{ background: "#DC2626" }}>
-        <span>Live preview</span>
-        <span className="opacity-60">·</span>
-        <span className="opacity-80">{remaining > 0 ? `${remaining} interaction${remaining === 1 ? "" : "s"} left` : "Limit reached"}</span>
-        <span className="opacity-60">·</span>
-        <a href={STORE_URL} target="_blank" rel="noopener noreferrer" className="underline font-bold text-white">Get full access</a>
-      </div>
-
       {/* ── HEADER ── */}
       <div className="bg-tracker-header text-tracker-header-foreground rounded-t font-bold">
         {/* Mobile header */}
